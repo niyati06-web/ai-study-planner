@@ -4,8 +4,7 @@ from groq import Groq
 import os
 
 app = Flask(__name__)
-CORS(app)
-
+CORS(app, origins="*")
 client = Groq(api_key="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")
 
 @app.route('/test')
